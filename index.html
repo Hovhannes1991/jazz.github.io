@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Play</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body onkeypress="audioPlayNums(event)" onkeyup="keyup(event)">
+    <input id="onOff" type="button" name="onOff" value="Keyboard Off" onclick="onOff()">	    	
+	<div id="baraban">
+		<img src="src/baraban-3.png" onclick="audioPlay(1)"  width="139px">
+		<img src="src/baraban-3.png" onclick="audioPlay(2)"  width="200px">
+		<img src="src/baraban-3.png" onclick="audioPlay(3)"  width="170px">
+		<img src="src/baraban-3.png" onclick="audioPlay(4)"  width="100px">
+		<img src="src/baraban-2.png" onclick="audioPlay(5)"  width="125px">
+		<img src="src/baraban-2.png" onclick="audioPlay(6)"  width="131px">
+		<img src="src/baraban-2.png" onclick="audioPlay(7)"  width="131px">
+		<img src="src/baraban-1.png" onclick="audioPlay(8)"  width="131px">
+		<img src="src/baraban-1.png" onclick="audioPlay(9)"  width="131px">
+	</div>
+         <select id="bgImage" autocomplete="off" onchange="bgImageChange()">
+         	<option>red</option>
+         	<option>light-blue</option>
+         	<option>orange</option>
+         	<option>girl</option>
+         </select>            
+<script type="text/javascript" src="script.js"></script>		
+</body>
+</html>
