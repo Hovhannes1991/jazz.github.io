@@ -22,18 +22,19 @@ audio[10] = new Audio("src/audio/10.wav");
 
 function bgImageChange() {
 	var bgImage = document.getElementById("bgImage").value;
-	if (bgImage == "orange"){
-		document.body.style.backgroundImage = "url('src/background-orange.jpg')";
-	}
-	  else if (bgImage == "girl") {
-	  	document.body.style.backgroundImage = "url('src/background-girl-red.png')";
-	  }
-	   else if (bgImage == "light-blue") {
-	   	document.body.style.backgroundImage = "url('src/background-light-blue.jpg')";
-	   }
-	  else {
-	  	document.body.style.backgroundImage = "url('src/background-red.jpg')";
-	  }
+	if (bgImage.charAt(0) != "1"){	
+	  	document.body.style.backgroundImage = "url(src/background-" + bgImage + ".jpg)";
+	  	}
+	  	else{
+	  		var age = confirm("Are You 18+ ?");
+	  		if (age){
+	  			document.body.style.backgroundImage = "url(src/background-" + bgImage + ".jpg)";
+	  		}
+	  		else{
+	  			document.body.style.backgroundImage = "url(src/background-red.jpg";
+	  			document.getElementById("bgImage").value = "red";
+	  		}
+	  	}	  	
 }
 
 function audioPlay (x) {
