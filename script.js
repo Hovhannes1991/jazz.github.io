@@ -1,4 +1,5 @@
-var audio = new  Array();
+var audio = document.getElementsByTagName("audio");
+/*
 audio[0] = false;
 audio[1] = new Audio("src/audio/1.mp3");
 audio[2] = new Audio("src/audio/2.mp3");
@@ -10,7 +11,7 @@ audio[7] = new Audio("src/audio/7.mp3");
 audio[8] = new Audio("src/audio/8.mp3");
 audio[9] = new Audio("src/audio/9.wav");
 audio[10] = new Audio("src/audio/10.wav");
-
+*/
 /*function audioPlay (x) {
 	var sound = audio[x];
 	sound.pause();
@@ -98,6 +99,7 @@ function audioPlayNums(event) {
 
 
 var on_Off = 0;
+var numImage = document.getElementsByClassName("numberedImage");
 function onOff() {
 	if(on_Off == 0){
 	/*  document.getElementById("onOff").value="Keyboard On";
@@ -111,7 +113,8 @@ function onOff() {
 		document.getElementsByTagName('img')[7].src = 'src/imageNumbers/num_8.png';
 		document.getElementsByTagName('img')[8].src = 'src/imageNumbers/num_9.png';  */
 		for (var srcIndex = 0; srcIndex < 9; srcIndex++){
-			document.getElementsByTagName('img')[srcIndex].src = 'src/imageNumbers/num_' + (srcIndex + 1) + '.png';
+			//document.getElementsByTagName('img')[srcIndex].src = 'src/imageNumbers/num_' + (srcIndex + 1) + '.png';
+			document.getElementsByTagName('img')[srcIndex] = numImage[srcIndex];				
 		}
 		on_Off++;
 	}
