@@ -113,8 +113,7 @@ function onOff() {
 		document.getElementsByTagName('img')[7].src = 'src/imageNumbers/num_8.png';
 		document.getElementsByTagName('img')[8].src = 'src/imageNumbers/num_9.png';  */
 		for (var srcIndex = 0; srcIndex < 9; srcIndex++){
-			//document.getElementsByTagName('img')[srcIndex].src = 'src/imageNumbers/num_' + (srcIndex + 1) + '.png';
-			document.getElementsByTagName('img')[srcIndex] = numImage[srcIndex];				
+			document.getElementsByTagName('img')[srcIndex].src = 'src/imageNumbers/num_' + (srcIndex + 1) + '.png';						
 		}
 		on_Off++;
 	}
